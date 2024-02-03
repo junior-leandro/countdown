@@ -6,8 +6,19 @@ const targetElement = document.querySelector("[data-target]");
 
 const calendar = document.getElementById("date")
 
+const changeDateFormatTo = date => {
+    const [yy, mm, dd] = date.split(/-/g);
+    return `${dd}/${mm}/${yy}`;
+  };
 
-targetElement.innerHTML = calendar.value;
+  targetElement.innerHTML = changeDateFormatTo(calendar.value); 
 
 calendar.addEventListener('change', () => {
-    targetElement.innerHTML = calendar.value; });
+
+    targetElement.innerHTML = changeDateFormatTo(calendar.value); 
+});
+
+
+  
+
+
