@@ -18,6 +18,54 @@ body {
     transition: background 0.2s linear;
 }
 
+body.light{
+    background-color: #e6e6e6;
+}
+
+/* START theme config */
+
+.theme{
+    position: absolute;
+    top: 25px;
+    left: 93vw;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.label{
+    background-color: #c7c6c6;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+}
+
+.label .ball{
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.3s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+
+/* END theme config */
 
 .input{
     color: #FFFFFF;
